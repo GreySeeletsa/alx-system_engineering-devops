@@ -1,10 +1,12 @@
-#!/usr/bin/env bash
-# Install nginx on web server; Nginx should be listening on port 80
+#!/usr/bin/env/bash
+# script to install nginx
 
-#!/usr/bin/env bash
-# Installs Nginx
+sudo apt-get update
+sudo apt-get install nginx
+sudo ufw 'Nginx HTTP'
 
-apt-get update
-apt-get install -y nginx
-echo "Holberton School" > /var/www/html/index.html
-service nginx start
+echo "Hello World!" sudo tee /var/www/html/index.html
+
+sudo nginx -t
+
+sudo service nginx reload
