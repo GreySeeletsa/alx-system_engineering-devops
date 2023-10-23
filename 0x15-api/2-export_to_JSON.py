@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""fetches info and exports it in csv format"""
+"""fetches info and exports it in json format
+"""
 import json
 import requests
 import sys
@@ -28,14 +29,17 @@ if __name__ == "__main__":
     tasks = response.text
     tasks = json.loads(tasks)
 
-    # for building the csv
-    builder = ""
+    dict_key = str(user_id)
+
+    # To handle the build of json
+    builder = {dict_key: []}
     for task in tasks:
-        builder += '"{}","{}","{}","{}"\n'.format(
-            user_id,
-            user_name,
-            task['completed'],
-            task['title']
-        )
-    with open('{}.csv'.format(user_id), 'w', encoding='UTF8') as myFile:
-        myFile.write(builder)
+        json_data = {
+            "task": task['title'],  # or use get method
+            "completed": task['completed'],
+            "username": user_name
+        }
+        builder[dict_key].append(json_data)
+    json_encoded_data = json.dumps(builder)
+    with open('{}.json'.format(user_id), 'w', encoding='UTF8') as myFile:
+        myFile.write(json_encoded_data)
