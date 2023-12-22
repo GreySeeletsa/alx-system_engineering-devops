@@ -26,4 +26,4 @@ Review and update our alerting rules to ensure we are notified of similar issues
 Schedule a training session for the engineering team on best practices for managing our infrastructure.
 We apologize for any inconvenience caused and appreciate your understanding as we work to improve our service.
 
-!(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zenduty.com%2Fblog%2Fblameless-postmortems%2F&psig=AOvVaw0x2Qh1QlfX6I-Lznp0RHnu&ust=1703357766812000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOCN3bHco4MDFQAAAAAdAAAAABAY)
+! [postmortem] (./postmortem.png "Image")
