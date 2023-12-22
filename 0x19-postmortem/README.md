@@ -16,7 +16,6 @@ The root cause of the issue was a misconfiguration in the load balancer that was
 
 # Corrective and Preventative Measures
 To prevent this issue from happening again, we need to improve our infrastructure management and monitoring. Specifically, we should:
-
   -Implement more robust health checks for our load balancers.
   -Improve our alerting system to catch misconfigurations.
   -Provide additional training for our team on managing and troubleshooting our infrastructure.
